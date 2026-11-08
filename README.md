@@ -140,3 +140,7 @@ MIT. Contributions are accepted under the same license; see [LICENSE](LICENSE).
 ## Privacy
 
 [Privacy and data handling](docs/privacy.md) explains workspace records, host processing, retention, and contact options. podium operates no separate backend or telemetry service.
+
+## Reviewer checks
+
+[Host capabilities, three reproducible scenarios, and troubleshooting](docs/reviewer-guide.md). Expected results are distinguished from completed test evidence.
