@@ -8,6 +8,8 @@ podium is a set of instructions and templates that runs through your Claude host
 
 When you use its procedures, it may ask the host to read relevant project files and session metadata, create or edit workspace files, and manage sessions using the tools that host exposes. Workstream files can contain task descriptions, names, decisions, next actions, and session identifiers. Personal information you include in those materials can therefore be read and stored in your workspace. Do not put credentials or other sensitive information in workstream records.
 
+When you ask where an earlier decision was made, `find` may use host-provided session search to read relevant excerpts from earlier or archived conversations if project files are insufficient. It should limit reading to the useful match, identify the source, and ask before copying conversation content into a workstream file. This can include conversation content, not only session metadata. File storage approval does not authorize forwarding the content elsewhere.
+
 ## Where data is processed and sent
 
 The maintainer does not receive your project files through a podium-operated service. The host model and tools process the material they read under that provider's terms, privacy settings, and retention rules. A workspace may be on your computer or hosted/synced elsewhere; podium does not guarantee that all processing or storage stays on your device.
