@@ -36,4 +36,4 @@ Use hashes/diffs to verify writes and non-writes. Save model output separately f
 
 ## Recorded observations
 
-[Scoped v0.2.3 observations, 2026-11-09](reviewer-results-2026-11-09.md): initial explicit-instruction execution with file evidence, followed by a separately user-reported installed-skill setup. Original activation logs, the directory installation path, and rule-update rejection remain unverified.
+[Scoped v0.2.3 observations, 2026-11-09](reviewer-results-2026-11-09.md): initial explicit-instruction execution with file evidence, followed by a separately user-reported installed-skill setup. A later explicit-refusal case has matching before/after file evidence. Original activation logs, directory installation, and waiting for a later interactive rule-update refusal remain unverified.

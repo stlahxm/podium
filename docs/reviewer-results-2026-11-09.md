@@ -36,8 +36,17 @@ In a separate test session, the user relayed that the first tool call was `Skill
 
 This supports a **reported successful installed-skill selection and initial setup in that tested environment**. The reviewer of this document did not directly inspect the original Skill invocation transcript or compare the forwarded session-start text with the original input. The session was launched by a test session, so it is not the same as a person starting an independent fresh conversation. This is not a test of installation through the Anthropic directory Add button, nor broad activation reliability across prompts or hosts.
 
-The host reportedly added approved command permissions to project-local settings before Podium's file-change approval. Record the boundary as “Podium's project-file changes followed approval,” not “every file on disk remained unchanged.” Do not treat a host settings write as an unapproved Podium write without tool evidence. Existing older cache entries alone do not prove that the old plugin was loaded. Rule-update rejection remains outstanding.
+The host reportedly added approved command permissions to project-local settings before Podium's file-change approval. Record the boundary as “Podium's project-file changes followed approval,” not “every file on disk remained unchanged.” Do not treat a host settings write as an unapproved Podium write without tool evidence. Existing older cache entries alone do not prove that the old plugin was loaded. Rule-update rejection was still outstanding at this point; see the later refusal test below.
 
 한국어: 별도 시험 대화에서 일반 설정 요청을 보고 첫 도구로 설치된 `podium:podium`을 선택했고, Skill 도구가 제공한 0.2.3 캐시의 init·한글 템플릿으로 승인 후 설정했다는 보충 보고를 사용자가 전달했습니다. 스킬 호출·직접 파일 읽기 지시나 기대 정답이 시작 지시에 없었다는 보고도 포함합니다. 해당 환경의 **설치된 스킬 선택·초기 설정 성공 보고**로 기록합니다. 문서 검토자가 원본 Skill 호출 로그나 최초 입력과 전달 지시의 동일성을 직접 확인한 것은 아닙니다. 시험 대화가 연 세션이라는 조건도 남으며, 독립적인 새 사용자 대화나 디렉터리 Add 설치 경로를 검증한 것은 아닙니다.
 
-호스트의 명령 권한 저장으로 로컬 설정 파일이 먼저 바뀌었다는 보고가 있으므로, 승인 경계는 “Podium의 프로젝트 파일 변경은 승인 후 수행”으로 제한합니다. 예전 캐시 폴더 존재만으로 구버전 로드를 추정하지 않습니다. 규칙 갱신 거절은 계속 미검증입니다.
+호스트의 명령 권한 저장으로 로컬 설정 파일이 먼저 바뀌었다는 보고가 있으므로, 승인 경계는 “Podium의 프로젝트 파일 변경은 승인 후 수행”으로 제한합니다. 예전 캐시 폴더 존재만으로 구버전 로드를 추정하지 않습니다. 이 시점에는 규칙 갱신 거절이 미검증이었으며 아래 후속 시험으로 보완했습니다.
+
+
+## Follow-up: rule-update refusal, file-verified
+
+A later test used an installed 0.2.3 session according to the tester's report. With authorization limited to fixture preparation, one ordinary descriptive sentence was omitted from the Podium section of a fictional project's CLAUDE.md. The tester proposed the one-line restoration but did not apply it because the user explicitly refused in the request. No restoration or new backup was reported.
+
+A subsequent independent file comparison confirmed that the prepared and post-refusal SHA-256 manifests were identical, and the complete current project file set matched those manifests: **8/8 files**, including project-local host settings. The omitted sentence remained absent. This supports refusal-without-project-changes for this scenario. The refusal was supplied in the request; this run does **not** independently test pausing at a new question and receiving a later refusal. The installed version and procedure invocation remain tester-reported rather than independently inspected original tool calls. No broader host/installation claim is added.
+
+한국어: 후속 시험에서 가상 프로젝트 Podium 설명 문장 하나만 승인 범위에서 생략한 뒤 복구 패치를 제안했습니다. 요청에 명시된 적용 거절을 따라 복구하지 않았다는 보고를 받았습니다. 준비 직후·거절 후 SHA-256 목록과 현재 프로젝트의 전체 파일 집합을 직접 대조해 **8/8 일치**, 설명 문장 누락 상태 유지를 확인했습니다. 해당 시나리오의 거절 후 무변경은 파일 증거로 확인됐습니다. 다만 거절이 요청에 사전 명시됐으므로 새 질문 뒤 후속 거절 답변을 기다리는 동작까지 이번 시험으로 검증한 것은 아닙니다. 설치 버전·절차 호출은 보고 기반이며 원본 도구 로그 직접 검증과 구별합니다. 시험용 누락은 승인 없이 정리하거나 복구하지 않았습니다.
