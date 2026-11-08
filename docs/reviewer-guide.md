@@ -33,3 +33,7 @@ Use hashes/diffs to verify writes and non-writes. Save model output separately f
 - The directory flagged download-and-run patterns in the icon and banner PNGs in v0.2.3. Those files are image assets; the bundle declares no execution component. PNG structure/CRC checks passed. This suggests a binary-content match but is not an official false-positive determination. Keep review findings visible and respond with file/version evidence if requested.
 - The v0.2.3 data-only tag excludes developer scripts, repository automation, and the marketplace catalog. Those remain on `main`. Approval and publication are separate from installation and security scan results.
 - Report general issues through GitHub Issues; use [SECURITY.md](../SECURITY.md) for private vulnerability reports.
+
+## Recorded observations
+
+[Scoped v0.2.3 observations, 2026-11-09](reviewer-results-2026-11-09.md): explicit instruction execution with file evidence; installed-plugin activation and rule-update rejection remain unverified.
